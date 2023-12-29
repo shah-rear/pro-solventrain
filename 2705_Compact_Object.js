@@ -31,7 +31,7 @@ obj is a valid JSON object
 
 */
 
-// Solution: 1
+// Solution: 1 "Test case accepted but didn't accept as submitted"
 
 function compactObject(input) {
     if (Array.isArray(input)) {
