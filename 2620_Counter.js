@@ -36,6 +36,8 @@ calls[i] === "call"
  * @return {Function} counter
  */
 
+// solution: 1
+
 function createCounter(n) {
     let counterValue = n;
   
@@ -46,10 +48,14 @@ function createCounter(n) {
     };
   }
 
+
+// solution: 2
+
   var createCounter = function(n) {
     return ()=> n++
 };
 
+// solution: 3
 
 function createCounter(start) {
     let count = start;
@@ -58,17 +64,6 @@ function createCounter(start) {
     }
   }
 
-function* createCounter(start) {
-  let count = start;
-  while (true) {
-    yield count++;
-  }
-}
-
-const counter = createCounter(10);
-console.log(counter.next().value); // 10
-console.log(counter.next().value); // 11
-console.log(counter.next().value); // 12
 
 /*
 
