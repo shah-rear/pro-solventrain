@@ -52,6 +52,12 @@ var compose = function(functions) {
     };
 };
 
+/*
+The reduceRight method is used to iterate over the array of functions from right to left.
+The accumulator (acc) is initially set to the input value (x), and each function in the array is applied to the accumulator.
+The result is the output of the composition of functions.
+*/
+
 // Using Array.prototype.reduce():
 
 var compose = (functions) => {
