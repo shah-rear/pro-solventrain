@@ -58,7 +58,7 @@ Constraints:
 
 // Code In JavaScript
 
-var reduce = function(nums, fn, init) {
+var reduceArray = function(nums, fn, init) {
   let val = init;
   for (let i = 0; i < nums.length; i++) {
     val = fn(val, nums[i]);
@@ -68,7 +68,7 @@ var reduce = function(nums, fn, init) {
 
 // Using forEach loop
  
-var reduce = function(nums, fn, init) {
+var reduceArray = function(nums, fn, init) {
   let val = init;
   nums.forEach(num => {
     val = fn(val, num);
@@ -78,10 +78,16 @@ var reduce = function(nums, fn, init) {
 
 // we can edit init itself instead of copying it
 
-var reduce = function(nums, fn, init) {
+var reduceArray = function(nums, fn, init) {
     nums.forEach(e=> init = fn(init,e))
     return init;
 }
+
+// Using reduce
+
+function reduceArray(nums, fn, init) {
+    return nums.reduce((val, num) => fn(val, num), init);
+  }
 
 // Using reduceRight
 
@@ -98,11 +104,10 @@ function reduceArray(nums, fn, init) {
     const head = nums[0];
     const tail = nums.slice(1);
     const val = fn(init, head);
-    return reduceArray4(tail, fn, val);
+    return reduceArray(tail, fn, val);
   }
 }
 // Using for...of loop
-
 
 function reduceArray(nums, fn, init) {
   let val = init;
