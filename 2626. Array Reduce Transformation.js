@@ -41,6 +41,7 @@ The final answer is 130.
 Example 3:
 
 Input: 
+
 nums = []
 fn = function sum(accum, curr) { return 0; }
 init = 25
