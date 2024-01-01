@@ -27,7 +27,7 @@ Constraints:
 -231 <= x <= 231 - 1
 */
 
-Approach 1: Reversing the Entire Number
+/*Approach 1: Reversing the Entire Number
 Explanation:
 We begin by performing an initial check. If the input number x is negative, it cannot be a palindrome since palindromes are typically defined for positive numbers. In such cases, we immediately return false.
 
@@ -44,9 +44,9 @@ Once the loop is completed, we have reversed the entire number. Now, we compare 
 
 If they are equal, it means the number is a palindrome, so we return true.
 If they are not equal, it means the number is not a palindrome, so we return false.
-The code uses a long long data type for the reversed variable to handle potential overflow in case of large input numbers.
+The code uses a long long data type for the reversed variable to handle potential overflow in case of large input numbers.*/
 
-Code: C++
+// Code: C++
 
 class Solution {
 public:
@@ -68,7 +68,7 @@ public:
     }
 };
 
-Code: Java
+// Code: Java
 
 class Solution {
     public boolean isPalindrome(int x) {
@@ -89,7 +89,7 @@ class Solution {
     }
 }
 
-Code: Python
+// Code: Python
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
@@ -106,7 +106,7 @@ class Solution:
 
         return reversed_num == x
 
-Approach 2: Reversing Half of the Number
+/*Approach 2: Reversing Half of the Number
 Instead of reversing the entire number, we can reverse only the last half of the number. This approach is tricky because when we reverse the last half of the number, we don't want the middle digit to be reversed back to its original value. This can happen if the number has an odd number of digits. To resolve this, we can compare the first half of the number with the reversed second half of the number.
 
 Explanation:
@@ -127,9 +127,9 @@ Once the loop is completed, we have reversed the second half of the digits. Now,
 For an even number of digits, if x is equal to reversed, then the number is a palindrome. We return true.
 For an odd number of digits, if x is equal to reversed / 10 (ignoring the middle digit), then the number is a palindrome. We return true.
 If none of the above conditions are met, it means the number is not a palindrome, so we return false.
-The code avoids the need for reversing the entire number by comparing only the necessary parts. This approach reduces both time complexity and memory usage, resulting in a more efficient solution.
+The code avoids the need for reversing the entire number by comparing only the necessary parts. This approach reduces both time complexity and memory usage, resulting in a more efficient solution.*/
 
-Code: C++
+// Code: C++
 
 class Solution {
 public:
@@ -147,7 +147,7 @@ public:
     }
 };
 
-Code: Java
+// Code: Java
 
 class Solution {
     public boolean isPalindrome(int x) {
@@ -167,7 +167,7 @@ class Solution {
     }
 }
 
-Code: Python
+// Code: Python
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
